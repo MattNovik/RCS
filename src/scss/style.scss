@@ -1,0 +1,143 @@
+$primary-color:#162EAE;
+
+*{
+	margin:0;
+	padding:0;
+}
+html {
+	width:calc(100vw - 16px);
+	height:auto;
+	overflow-x:hidden;
+}
+body {
+	width:100%;
+	height:100%;
+}
+header {
+	width:100%;
+	height:170px;
+	max-height:170px;
+	.header_top {
+		width:100%;
+		height:118px;
+		max-height:120px;
+		display:flex;
+		.header_logo {
+			flex-grow:1;
+			max-width:50%;
+			display:flex;
+			align-items:center;
+			.logo {
+				margin-left:10%;
+			}
+		}
+		.header_contact-search {
+			flex-grow:1;
+			display:flex;
+			align-items:center;
+			.header_contact {
+				flex-grow:1;
+				text-align:center;
+			}
+			.header_search {
+				flex-grow:1;
+				display:flex;
+				justify-content: center;
+				.search {
+					width:120px;
+					height:30px;
+					border:solid 1px black;
+				}
+			}
+		}
+	}
+	.header_bottom {
+		width:100%;
+		height:48px;
+		max-height:50px;
+		display:flex;
+		justify-content: center;
+		align-content:center;
+		border-top:solid 2px $primary-color;
+		border-bottom:solid 2px $primary-color;
+		.main_menu_first,
+		.main_menu_second,
+		.main_menu_third,
+		.main_menu_fourth,
+		.main_menu_fifth {
+			height:100%;
+			flex-grow:1;
+			display:flex;
+			justify-content: center;
+			align-items: center;
+			border-right:solid 2px $primary-color;
+		}
+		.main_menu_fifth {
+			border:none;
+		}
+	}
+}
+main {
+	width:100%;
+	height:auto;
+	.main_big-photo {
+		width:100%;
+		height:800px;
+		background-image: url("../images/main_bigphoto.jpg");
+		background-size:cover;
+	}
+	.main_make-order {
+		width:100%;
+		max-width:100%;
+		height:68px;
+		max-height:70px;
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		border-bottom:solid 2px $primary-color;
+	}
+	.main_services {
+		width:100%;
+		max-width:100%;
+		height:auto;
+		display:grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 300px 300px;
+		.services_first {
+			background-image: url("../images/frist.jpg");
+			background-size:cover;
+			border:solid 3px #FFFFFF;
+		}
+		.services_second {
+			background-image: url("../images/second.jpg");
+			background-size:cover;
+			border:solid 3px #FFFFFF;
+			border-left:none;
+		}
+		.services_third {
+			background-image: url("../images/third.jpg");
+			background-size:cover;
+			border:solid 3px #FFFFFF;
+			border-top:none;
+		}
+		.services_fourth {
+			background-image: url("../images/fourth.jpg");
+			background-size:cover;
+			border-bottom:solid 3px #FFFFFF;
+			border-right:solid 3px #FFFFFF;
+		}
+		.services_first,
+		.services_second,
+		.services_third,
+		.services_fourth {
+			.services_words {
+				position:relative;
+				text-align:center;
+				top:80%;
+				color:#FFFFFF;
+				font-size:20px;
+				font-weight:900;
+			}
+		}
+	}
+}
