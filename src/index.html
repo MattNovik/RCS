@@ -6,7 +6,13 @@
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <script src="mark.js/dist/mark.min.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	    <script src="remodal/dist/remodal.min.js"></script>
+		<script src="js/form.min.js"></script>
 		<link rel="stylesheet" href="css/style.min.css">
+		<link rel="stylesheet" href="remodal/dist/remodal.css">
+		<link rel="stylesheet" href="remodal/dist/remodal-default-theme.css">
+		<link rel="stylesheet" href="css/formstyle.min.css">
 		<link rel="shortcut_icon" href="images/logo/favicon.png" type="image/png">
 	</head>
 	<body>
@@ -26,12 +32,12 @@
 						</div>
 					</div>
 				</div>
-				<div class="header_middle">
-					<div class="make_order">Заявка онлайн</div>
+				<!-- <div class="header_middle">
+					<a class="linkButton make_order" data-remodal-target="firstModal">Оставить заявку</a>
 					<div class="make_backcall">Заказать обратный звонок</div>
-				</div>
+				</div> -->
 				<div class="header_bottom">
-					<a href="#" class="main_menu_first">Санкт-Петербург
+					<a href="#error" class="main_menu_first">Санкт-Петербург
 						<ul class="down_first">
 							<li>Lorem ipsum</li>
 							<li>Lorem ipsum</li>
@@ -83,7 +89,10 @@
 			</div>
 		</header>
 		<main>
-			<div class="main_big-photo"></div>
+			<div class="main_big-photo">
+				<div class="slogan">WE MAKE YOUR LIFE SAFER</div>
+				<div class="linkButton make_order" data-remodal-target="firstModal">Оcтавить заявку</div>
+			</div>
 			<!-- <button class="btn main_make-order">MAKE AN ORDER</button> -->
 			<div class="main_services">
 				<div class="services_first">
@@ -103,13 +112,50 @@
 		<footer>
 			<div class="footer_site-map-contact">
 				<div class="footer_site-map">SITE MAP</div>
-				<div class="footer_contact">197342,г. Санкт-Петербург, Наб. Черной Речки, д.41,</br> БЦ "Прогресс-Сити", оф. 504</div>
+				<div class="footer_contact">
+					<h4 class="city">Санкт-Петербург</h4>
+					<p>Наб. Черной Речки, д.41</p>
+					<p>БЦ "Прогресс-Сити"</p>
+					<p>email: matvej.novik@gmail.com</p>
+				</div>
 				<div class="footer_year-rights">2019. ООО "Региональный центр сертификации". Все права защищены</div>
 			</div>
 			<div class="map">
 				<script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=hiYVaNQSS_22dTvVdzmrO3qWsFHCW9Oq&width=100%&height=260&lang=ru_RU&sourceType=constructor"></script>
 			</div>
 		</footer>
+        <div class="remodal" data-remodal-id="firstModal" data-remodal-options="hashTracking: false,closeOnConfirm: false">
+		  <button data-remodal-action="close" class="remodal-close"></button>
+		  <div class="formArea">
+		   
+		  <form id="secondForm" class="form" autocomplete="off">
+		  <p class="formTitle">Закажите обратный звонок и наш консультант свяжется с вами</p>
+		  <p class="msgs"></p>
+		 
+		      <fieldset class="form-fieldset ui-input __first">
+		        <input name="uname" type="text" id="username" required tabindex="0"/>
+		        <label for="username">
+		          <span data-text="Введите ваше имя">Введите ваше имя</span>
+		        </label>
+		      </fieldset>
+		 
+		      <fieldset class="form-fieldset ui-input __second">
+		        <input name="uphone" type="tel" id="phone" tabindex="0" required pattern="^[ 0-9]+$"/>
+		        <label for="phone">
+		          <span data-text="Введите ваш телефон">Введите ваш телефон</span>
+		        </label>
+		      </fieldset>
+		 
+		      <input name="formInfo" class="formInfo" type="hidden" value=""/>
+		 
+		      <div class="form-footer">
+		        <input type="submit" class="formBtn" value="Обратный звонок" />
+		      </div>
+		  </form>
+		  </div>
+		</div>
 		<script src="js/script.min.js"></script>
+		<script src="js/peppermint.min.js"></script>
 	</body>
 </html>
+
